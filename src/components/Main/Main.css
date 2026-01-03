@@ -58,24 +58,23 @@
   color: #cbd5f5;
 }
 
-/* ===================== */
-/* TABLET E CELULAR */
-/* ===================== */
 @media (max-width: 900px) {
+  .hero {
+    padding-top: 20%; /* 🔥 desce tudo um pouco */
+  }
+
   .hero-content {
-    flex-direction: column; /* 🔥 ISSO resolve */
+    flex-direction: column;
     text-align: center;
   }
 
   .profile-img {
-    transform: translateX(0);
-    margin: 0 auto;
-  }
-
-  .hero-about {
-    max-width: 100%;
+    transform: none;
+    margin-top: 32px;   /* 🔥 desce a imagem */
+    margin-bottom: 24px;
   }
 }
+
 
 /* ===================== */
 /* CELULAR PEQUENO */
