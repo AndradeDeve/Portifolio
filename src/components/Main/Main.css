@@ -1,0 +1,85 @@
+/* HERO */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.profile-img {
+  transform: translateX(60px);
+}
+
+/* IMAGEM */
+.profile-img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 3px solid #1e293b;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* TEXTO */
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: #94a3b8;
+}
+
+.hero-text span {
+  color: #3b82f6;
+}
+
+/* ===================== */
+/* TABLET E CELULAR */
+/* ===================== */
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr; /* vira uma coluna */
+    text-align: center;
+  }
+
+  .profile-img {
+    transform: translateX(0px);
+    margin: 0 auto; /* 🔥 centraliza a imagem */
+    display: block;
+  }
+}
+
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
+  .profile-img {
+    transform: translateX(0px);
+    width: 220px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+.hero-about {
+  margin-top: 16px;
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}

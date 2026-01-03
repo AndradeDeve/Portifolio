@@ -1,0 +1,103 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e293b;
+  z-index: 1000;
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* MENU PADRÃO (DESKTOP) */
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+nav a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a:hover {
+  color: #3b82f6;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 3px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* mostra botão */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* esconde menu */
+  nav ul {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    display: none;
+  }
+
+  /* menu aberto */
+  nav ul.open {
+    display: flex;
+  }
+}
+
+/* ANIMAÇÃO DO ÍCONE */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
