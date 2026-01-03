@@ -1,4 +1,4 @@
-import Anamtec from "../../../assets/projetos/AnamTec.png";
+import Anamtec from "../../../assets/projetos/Anamtec.png";
 import Biblioteca from "../../../assets/projetos/Biblioteca.png";
 import RedeSocial from "../../../assets/projetos/RedeSocial.png";
 export const projects = [
